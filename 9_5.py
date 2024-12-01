@@ -16,7 +16,7 @@ class Iterator:
         return self
 
     def __next__(self):
-        if (self.step > 0 and self.pointer >= self.stop) or (self.step < 0 and self.pointer <= self.stop):
+        if (self.step > 0 and self.pointer > self.stop) or (self.step < 0 and self.pointer < self.stop):
             raise StopIteration
         result = self.pointer
         self.pointer += self.step
@@ -37,14 +37,14 @@ iter5 = Iterator(10, 1)
 
 for i in iter2:
     print(i, end=' ')
-    print()
+print()
 for i in iter3:
     print(i, end=' ')
-    print()
+print()
 for i in iter4:
     print(i, end=' ')
-    print()
+print()
 for i in iter5:
     print(i, end=' ')
-    print()
+print()
 
